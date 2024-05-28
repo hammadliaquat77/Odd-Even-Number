@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd & Even Number</title>
+</head>
+<style>
+    body {
+        background: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 20px;
+        text-decoration: underline 3px solid yellow;
+    }
+
+    .main {
+        height: 400px;
+        width: 500px;
+        border-radius: 10px;
+        background-color: rgb(6, 30, 30);
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        /* text-align: center; */
+    }
+
+
+    #odd {
+        height: 50px;
+        width: 30vh;
+        margin-top: 50px;
+        outline: none;
+        border: 1px solid black;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #odd::placeholder {
+        font-size: 16px;
+
+    }
+
+
+    h3 {
+        color: darkmagenta;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+
+
+    #even {
+        height: 50px;
+        width: 30vh;
+        margin-top: 20px;
+        outline: none;
+        border: 1px solid black;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px;
+        margin: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <h1>Odd & Even Number </h1>
+        <input type="number" placeholder="Enter your Number" id="odd"> <br><br>
+        <h3>Convert</h3>
+        <input type="text" id="even" disabled > <br><br>
+        <button id=btn onclick="Name()">Click</button>
+    </div>
+
+    <script>
+        
+        function Name() {
+
+            let num = document.getElementById('odd').value
+
+            if (num === "") {
+                alert("Please enter a number");
+                return;
+            }
+
+
+            if (num % 2 === 0) {
+                 console.log("Even Number " + num)
+                var cover = document.getElementById('even').value = 'Even Number'
+            }
+
+            else {
+                console.log("Odd Number " + num);
+                var conver = document.getElementById('even').value = 'Odd Number'         
+            }
+
+        }
+
+        document.addEventListener('keypress', function (e) {
+            if (e.key === "Enter") {
+                Name()
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
